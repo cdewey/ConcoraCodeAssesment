@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+}
+
+.container-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.headerText{
+    font-weight: bold;
+    font-size: 24pt;
+}
+
+.subheaderText{
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+.subsubheaderText{
+    font-size: 18pt;
+}
+
+.product-image{
+ align-self: center;
+ margin-right: 2em;
+}
+
+ul{
+    padding-inline-start: 20px;
+}

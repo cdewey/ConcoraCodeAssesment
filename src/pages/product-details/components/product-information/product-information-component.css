@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    justify-content: left;
+    margin-bottom: .5em;
+}
+
+.container-col{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+ul{
+    padding-inline-start: 20px;
+}
