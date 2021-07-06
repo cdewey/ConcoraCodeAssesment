@@ -1,14 +1,30 @@
 const express = require('express')
 const cors = require('cors')
 let productsJson = require('./products.json');
+let siteConfigJson = require('./site-configs.json');
 const app = express()
-const port = 3001
+const port = 8080
 const fs = require('fs');
+const path = require("path");
 
-
+app.use(express.static(path.join(__dirname,"..", "build")));
 app.use(cors())
 
+//Basically three routes to all do the same thing the routing is mostly handled by react
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname,"..", "build", "index.html"));
+});
+
 app.get('/products', (req, res) => {
+    res.sendFile(path.join(__dirname,"..", "build", "index.html"));
+})
+
+app.get('/products/:id', (req, res) => {
+    res.sendFile(path.join(__dirname,"..", "build", "index.html"));
+})
+
+// using popst to "overload" the products route
+app.post('/products', (req, res) => {
     console.log("Get Products")
     res.send(
         {products : productsJson}
@@ -43,6 +59,22 @@ app.delete('/product/:id', (req, res) => {
 
     res.send(
         "SUCCESS"
+    );
+})
+
+
+//config 
+app.get('/config/:id', (req, res) => {
+    console.log("Get Config", req.params.id);
+    let desiredConfig = null;
+    for(let config of siteConfigJson){
+        if(config.id === parseInt(req.params.id)){
+            desiredConfig = config;
+            break;
+        }
+    }
+    res.send(
+        {siteConfig : desiredConfig}
     );
 })
 

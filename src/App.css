@@ -3,17 +3,19 @@
 }
 
 .App-header {
-  background-color: #C3C3C3;
+  /* background-color: #C3C3C3; */
+  justify-content: space-between;
   min-height: 10vh;
   display: flex;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: black;
   padding-left: 20px;
+  padding-right: 20px;
 }
 
 .App-footer {
-  background-color: #C3C3C3;
+  /* background-color: #C3C3C3; */
   min-height: 10vh;
   position: absolute;
   width: 100%;

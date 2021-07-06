@@ -26,7 +26,7 @@ class ProductDetailsPage extends React.Component {
             return;
         }
 
-        axios.get('http://localhost:3001/product/'+this.state.id)
+        axios.get('http://localhost:8080/product/'+this.state.id)
         .then((result) => {
             console.log(result);
             this.setState({

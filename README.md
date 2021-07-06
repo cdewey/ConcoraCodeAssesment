@@ -24,10 +24,5 @@ Note the root route "/" will redirect to products
 The database just reads and writes a JSON file.
 
 # TO DO
-
-- Have Express serve react
 - Add product form
 - Add product service
-- Button, Header, and Text color should come from a configuration route. Font style should also come from this method along with the a logo and company name.
-- Redux if time permits
-- General UI enhancements

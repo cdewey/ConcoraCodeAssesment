@@ -17,7 +17,7 @@ class ProductListPage extends React.Component {
 
     componentDidMount() {
 
-        axios.get('http://localhost:3001/products')
+        axios.post('http://localhost:8080/products')
         .then((result) => {
             console.log(result);
             this.setState({

@@ -1,0 +1,18 @@
+[{
+    "id": 1,
+    "buttonColor" : "red",
+    "headerColor" : "#C3C3C3",
+    "textColor" : "black",
+    "fontStyle" : "15px Arial, sans-sarif",
+    "companyName" : "WILE E. CO",
+    "companyLogo" : "https://img.favpng.com/15/22/22/looney-tunes-wile-portable-network-graphics-wile-e-coyote-and-the-road-runner-cap-image-png-favpng-7ksmrbzkkGj6HVdHG3bD9SpQx.jpg"
+},
+{
+    "id": 2,
+    "buttonColor" : "orange",
+    "headerColor" : "#33CAFF",
+    "textColor" : "black",
+    "fontStyle" : "15px Arial, sans-sarif",
+    "companyName" : "Road Runner Inc.",
+    "companyLogo" : "https://static.wikia.nocookie.net/worldofmayhem_gamepedia_en/images/d/d8/Hermes_Road_Runner.png/revision/latest/scale-to-width-down/256?cb=20210301183207"
+}]
