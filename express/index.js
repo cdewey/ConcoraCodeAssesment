@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+const bodyParser = require('body-parser')
 let productsJson = require('./products.json');
 let siteConfigJson = require('./site-configs.json');
 const app = express()
@@ -7,7 +8,9 @@ const port = 8080
 const fs = require('fs');
 const path = require("path");
 
+
 app.use(express.static(path.join(__dirname,"..", "build")));
+app.use(bodyParser.json()); 
 app.use(cors())
 
 //Basically three routes to all do the same thing the routing is mostly handled by react
@@ -54,6 +57,18 @@ app.delete('/product/:id', (req, res) => {
         }
     }
     console.log(productsJson.length);
+    let data = JSON.stringify(productsJson);
+    fs.writeFileSync('express/products.json', data);
+
+    res.send(
+        "SUCCESS"
+    );
+})
+
+app.put('/product', (req, res) => {
+    console.log("Add Product", req.body);
+    productsJson.push(req.body)
+
     let data = JSON.stringify(productsJson);
     fs.writeFileSync('express/products.json', data);
 

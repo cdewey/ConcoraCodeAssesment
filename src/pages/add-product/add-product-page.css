@@ -1,0 +1,29 @@
+label {
+    display: block;
+    min-width : 150px;
+    padding-right: 1em;
+}
+
+.form-group{
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.error-text{
+    color : red;
+}
+
+.flex {
+    display: flex;
+}
+
+.col-container{
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+}
+
+.left-form{
+    margin-right: 4em;
+}
